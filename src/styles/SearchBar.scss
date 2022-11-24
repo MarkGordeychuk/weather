@@ -1,0 +1,41 @@
+@import "variables";
+
+input {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.search-bar {
+    max-width: $width - 2 * $horizontal_padding;
+
+    &__dropdown {
+        position: absolute;
+        z-index: 1;
+        padding: 0 10px;
+        margin: 0;
+        box-sizing: border-box;
+        width: min($width - 2 * $horizontal_padding, calc(100% - 2 * $horizontal_padding));
+        border: 1px solid black;
+        max-height: 20em;
+        overflow-y: auto;
+        background-color: #fff;
+
+        &.hidden {
+            display: none;
+        }
+
+        & > li {
+            display: block;
+            margin: 0;
+
+            & > a {
+                display: block;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: blanchedalmond;
+                }
+            }
+        }
+    }
+}

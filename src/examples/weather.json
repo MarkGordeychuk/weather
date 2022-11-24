@@ -1,0 +1,44 @@
+{
+  "coord": {
+    "lon": 60.7314,
+    "lat": 56.085
+  },
+  "weather": [
+    {
+      "id": 803,
+      "main": "Clouds",
+      "description": "broken clouds",
+      "icon": "04n"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 270.64,
+    "feels_like": 266.03,
+    "temp_min": 270.64,
+    "temp_max": 270.64,
+    "pressure": 1020,
+    "humidity": 88,
+    "sea_level": 1020,
+    "grnd_level": 985
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 3.69,
+    "deg": 277,
+    "gust": 9.91
+  },
+  "clouds": {
+    "all": 82
+  },
+  "dt": 1667919338,
+  "sys": {
+    "country": "RU",
+    "sunrise": 1667877512,
+    "sunset": 1667908986
+  },
+  "timezone": 18000,
+  "id": 1536289,
+  "name": "Snezhinsk",
+  "cod": 200
+}

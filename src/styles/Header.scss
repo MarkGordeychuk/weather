@@ -1,0 +1,19 @@
+@import "variables";
+
+header {
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: $width + 2 * $header_overwidth;
+  height: $header_height;
+  border-radius: 0 0 $header_overwidth $header_overwidth;
+  background-color: $primary_color;
+  padding: 0 $header_overwidth + 20px;
+  display: flex;
+  align-items: center;
+  color: $primary_text_color;
+  font-size: $header_text_height;
+  
+  @media (max-width: $width + 2 * $header_overwidth) {
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,16 @@
+@import "./../variables";
+
+.current-weather {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: $primary_color;
+  color: $primary_text_color;
+  width: max-content;
+
+  &__city-name {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+}

@@ -1,0 +1,12 @@
+@import "variables";
+
+main {
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: $width;
+  height: calc(100vh - $header_height);
+  padding: $vertical_padding $horizontal_padding;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}

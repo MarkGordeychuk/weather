@@ -1,0 +1,71 @@
+@import "./../variables";
+
+
+.weather-forecast-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__prev, &__next {
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: $primary_color;
+    color: $primary_text_color;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__prev {
+    &::before {
+      content: "ᐊ";
+    }
+  }
+
+  &__next {
+    &::before {
+      content: "ᐅ";
+    }
+  }
+
+  &__list {
+    display: flex;
+    overflow: hidden;
+    padding: 0;
+    width: 80%;
+    background-color: $background_color;
+    border: 10px solid $primary_color;
+    border-radius: 10px;
+    transition: all 0.5s;
+    font-size: 12px;
+
+    & > li {
+      display: block;
+      margin: 8px 4px;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: white;
+      $width: 18px;
+      box-sizing: border-box;
+      min-width: calc(100% / 5 - 8px);
+    }
+
+    &__time {
+      font-size: 8px;
+      color: #444;
+    }
+
+    &__time {
+      font-size: 10px;
+      color: #444;
+    }
+  }
+}
