@@ -9,10 +9,10 @@ import WeatherForecast from "./WeatherForecast";
 
 
 export default function Weather(props) {
-    let [currentWeatherElement, setCurrentWeatherElement] = React.useState(null);
-    let [weatherForecastElement, setWeatherForecastElement] = React.useState(null);
+    let [currentWeather, setCurrentWeather] = React.useState(null);
+    let [weatherForecast, setWeatherForecast] = React.useState(null);
 
-    axios.get(
+    if (!currentWeather) axios.get(
         "https://api.openweathermap.org/data/2.5/weather",
         {
             params: {
@@ -21,10 +21,11 @@ export default function Weather(props) {
             }
         }
     ).then(response => {
-        setCurrentWeatherElement(<CurrentWeather data={response.data} />);
+        console.log(response.data);
+        setCurrentWeather(response.data);
     });
 
-    axios.get(
+    if (!weatherForecast) axios.get(
         "https://api.openweathermap.org/data/2.5/forecast",
         {
             params: {
@@ -33,13 +34,14 @@ export default function Weather(props) {
             }
         }
     ).then(response => {
-        setWeatherForecastElement(<WeatherForecast data={response.data} />);
+        console.log(response.data);
+        setWeatherForecast(response.data);
     });
 
     return (
         <div>
-            { currentWeatherElement }
-            { weatherForecastElement }
+            { currentWeather ? <CurrentWeather data={currentWeather} /> : null }
+            { weatherForecast ? <WeatherForecast data={weatherForecast} /> : null }
         </div>
     );
 }
