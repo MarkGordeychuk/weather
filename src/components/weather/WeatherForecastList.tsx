@@ -62,7 +62,7 @@ function WeatherForecastList({ data }) {
                             Max: { (weather.main.temp_max - 273.15).toFixed(2) } °C
                         </div>
                         <div className="weather-forecast-list__list__feels-like">
-                            Feels like { (weather.main.feels_like - 273.15).toFixed(2) }
+                            Feels like { (weather.main.feels_like - 273.15).toFixed(2) } °C
                         </div>
                         <div>
                             { weather.weather.map(weather => weather.description).join(", ") }
